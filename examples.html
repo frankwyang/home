@@ -37,5 +37,28 @@
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
           </li>
         </ul>    
+        
+        // initialization
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+          });
+
+          // Or with jQuery
+
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
+        
+        // methods
+          var instance = M.Collapsible.getInstance(elem);
+
+          /* jQuery Method Calls
+            You can still use the old jQuery plugin method calls.
+            But you won't be able to access instance properties.
+
+            $('.collapsible').collapsible('methodName');
+            $('.collapsible').collapsible('methodName', paramName);
+          */
     </body>
 </html>
